@@ -54,10 +54,12 @@
         <dt>営業時間</dt><dd>7:00〜22:00（年末年始休業）</dd>
       </dl>
     </div>
-    <form class="contact-form reveal" data-delay="1" onsubmit="event.preventDefault(); alert('お問い合わせを受け付けました（デモ）');">
+    <form id="contactForm" class="contact-form reveal" data-delay="1"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSeQwQz0A1xXjgr-KlWAeWWg1x4u3fIQFd0SgbtXZ7FtQ8AP2w/formResponse"
+          method="POST" target="hidden_iframe">
       <div class="field">
         <label>お問い合わせ種別<span class="req">REQUIRED</span></label>
-        <select required>
+        <select name="entry.385642660" required>
           <option value="">選択してください</option>
           <option>スクール体験・入会について</option>
           <option>コート予約について</option>
@@ -69,24 +71,26 @@
       </div>
       <div class="field">
         <label>お名前<span class="req">REQUIRED</span></label>
-        <input type="text" placeholder="山田 太郎" required />
+        <input type="text" name="entry.1204455348" placeholder="山田 太郎" required />
       </div>
       <div class="field">
         <label>メールアドレス<span class="req">REQUIRED</span></label>
-        <input type="email" placeholder="example@mail.com" required />
+        <input type="email" name="entry.588838377" placeholder="example@mail.com" required />
       </div>
       <div class="field">
         <label>電話番号</label>
-        <input type="tel" placeholder="090-XXXX-XXXX" />
+        <input type="tel" name="entry.483816725" placeholder="090-XXXX-XXXX" />
       </div>
       <div class="field">
         <label>お問い合わせ内容<span class="req">REQUIRED</span></label>
-        <textarea placeholder="ご質問・ご要望をご記入ください" required></textarea>
+        <textarea name="entry.634450167" placeholder="ご質問・ご要望をご記入ください" required></textarea>
       </div>
-      <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center;">
+      <button id="contactSubmit" class="btn btn-primary" type="submit" style="width:100%; justify-content:center;">
         この内容で送信する<span class="arrow"></span>
       </button>
+      <p id="contactStatus" role="status" aria-live="polite" style="margin-top:16px; font-size:13.5px; line-height:1.7; display:none;"></p>
     </form>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" aria-hidden="true"></iframe>
   </div>
 </section>
 
