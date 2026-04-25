@@ -229,6 +229,23 @@
   position: absolute; inset: 0;
   border-radius: var(--radius-lg);
 }
+.placeholder-img.has-photo { background: none; }
+.placeholder-img.has-photo::before,
+.placeholder-img.has-photo::after { display: none; }
+.img-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+.hv-main.has-photo .hv-label {
+  color: white;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  z-index: 2;
+}
 .about-visual .badge {
   position: absolute;
   right: -28px; bottom: 40px;
@@ -655,8 +672,9 @@
       </div>
     </div>
     <div class="hero-visual reveal" data-delay="2">
-      <div class="placeholder-img hv-main">
-        <span class="hv-label">HERO ／ コート全景</span>
+      <div class="placeholder-img hv-main has-photo">
+        <img class="img-fill" src="assets/images/court.jpg" alt="小田急藤沢テニスガーデンのコート" />
+        <span class="hv-label">小田急藤沢テニスガーデン</span>
       </div>
       <div class="placeholder-img hv-mid">
         <span style="font-family: ui-monospace, monospace; font-size: 10px; color: var(--ink-500); letter-spacing: 0.16em;">レッスン風景</span>
@@ -686,8 +704,8 @@
 <section class="section about">
   <div class="about-grid">
     <div class="about-visual reveal">
-      <div class="placeholder-img" style="position:absolute; inset:0;">
-        <span>代表写真／コートにて<br />（後ほど差し替え）</span>
+      <div class="placeholder-img has-photo" style="position:absolute; inset:0;">
+        <img class="img-fill" src="assets/images/representative.jpg" alt="有限会社ステップスポーツ 代表取締役" />
       </div>
       <div class="badge">
         Established<br /><strong>1985</strong><br />Fujisawa
@@ -868,33 +886,11 @@
       </p>
     </div>
     <div class="news-list reveal" data-delay="1">
-      <a class="news-item" href="news.html">
-        <span class="news-date">2026.04.18</span>
-        <span class="news-tag event">Event</span>
-        <span class="news-title">第15回 小田フェス 2026 春 開催決定のお知らせ</span>
-        <span class="news-arrow">→</span>
-      </a>
-      <a class="news-item" href="news.html">
-        <span class="news-date">2026.04.05</span>
-        <span class="news-tag school">School</span>
-        <span class="news-title">2026年度 春期ジュニアスクール体験会 受付開始</span>
-        <span class="news-arrow">→</span>
-      </a>
-      <a class="news-item" href="news.html">
-        <span class="news-date">2026.03.22</span>
+      <div class="news-item">
+        <span class="news-date">2026.05.01</span>
         <span class="news-tag notice">Notice</span>
-        <span class="news-title">ゴールデンウィーク期間中の営業時間について</span>
-        <span class="news-arrow">→</span>
-      </a>
-      <a class="news-item" href="news.html">
-        <span class="news-date">2026.03.10</span>
-        <span class="news-tag event">Event</span>
-        <span class="news-title">湘南ビーチテニスオープン2026 エントリー受付中</span>
-        <span class="news-arrow">→</span>
-      </a>
-    </div>
-    <div class="news-cta">
-      <a class="btn btn-ghost" href="news.html">すべてのお知らせを見る<span class="arrow"></span></a>
+        <span class="news-title">HPを新しく開設しました。</span>
+      </div>
     </div>
   </div>
 </section>
@@ -934,7 +930,7 @@
       <p>
         〒252-1106<br />
         神奈川県綾瀬市深谷南 7丁目2-1<br />
-        TEL: 0466-XX-XXXX<br />
+        TEL: 0467-76-1500<br />
         小田急藤沢テニスガーデン 運営
       </p>
     </div>
