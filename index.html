@@ -325,8 +325,11 @@
   max-width: var(--maxw);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) {
+  .biz-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .biz-card {
   background: white;
@@ -750,7 +753,7 @@
         <h2 class="section-title">私たちの<em>事業</em></h2>
       </div>
       <p class="section-lede" style="margin-left:auto;">
-        「はじめる」「つづける」「つながる」をキーワードに、テニスにまつわる体験を3つの柱で展開しています。
+        「はじめる」「つづける」「つながる」をキーワードに、テニスにまつわる体験を4つの柱で展開しています。
       </p>
     </div>
     <div class="biz-grid">
@@ -792,7 +795,21 @@
         <div class="body">
           <div class="en">Beach Tennis</div>
           <h3>ビーチテニススクール</h3>
-          <p>湘南の海を舞台にしたビーチテニス。開放感あふれる環境で、新しいスポーツの楽しさを体験できます。代表は連盟副会長としても活動。</p>
+          <p>湘南の海を舞台にしたビーチテニス。開放感あふれる環境で、新しいスポーツの楽しさを体験できます。</p>
+          <span class="more">View More</span>
+        </div>
+      </a>
+      <a class="biz-card reveal" data-delay="4" href="business.html#community">
+        <div class="img">
+          <div class="placeholder-img">
+            <span>地域コミュニティの様子</span>
+          </div>
+          <span class="num">04</span>
+        </div>
+        <div class="body">
+          <div class="en">Community</div>
+          <h3>コミュニティ事業</h3>
+          <p>テニスを軸に、世代を超えて集える場づくり。家庭や職場以外の「居心地の良い場所」として、人と人がつながる機会を提供しています。</p>
           <span class="more">View More</span>
         </div>
       </a>
