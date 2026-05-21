@@ -160,7 +160,7 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 32px;
+  padding: 8px 32px;
   background: var(--green-700);
   color: white !important;
   border-radius: 999px;
@@ -171,6 +171,7 @@ img { max-width: 100%; display: block; }
 }
 .nav a.nav-cta:hover { background: var(--green-800); transform: translateY(-1px); }
 .nav a.nav-cta .en { color: rgba(255,255,255,0.8) !important; }
+.nav a.nav-cta.active::after { display: none; }
 
 .menu-toggle {
   display: none;
