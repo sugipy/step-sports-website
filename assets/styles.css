@@ -90,7 +90,7 @@ img { max-width: 100%; display: block; }
   width: 44px;
   height: 44px;
   border-radius: 8px;
-  background: url('images/ss_logo.jpeg') center/contain no-repeat white;
+  background: url('images/ss_logo.png') center/contain no-repeat white;
   box-shadow: var(--shadow-sm);
   position: relative;
   flex-shrink: 0;
