@@ -155,7 +155,7 @@ img { max-width: 100%; display: block; }
   transform: translateX(-50%);
 }
 
-.nav-cta {
+.nav a.nav-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -169,8 +169,8 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
   transition: background .2s ease, transform .2s ease;
 }
-.nav-cta:hover { background: var(--green-800); transform: translateY(-1px); }
-.nav-cta .en { color: rgba(255,255,255,0.8) !important; }
+.nav a.nav-cta:hover { background: var(--green-800); transform: translateY(-1px); }
+.nav a.nav-cta .en { color: rgba(255,255,255,0.8) !important; }
 
 .menu-toggle {
   display: none;
