@@ -155,9 +155,21 @@
   .contact a{color:var(--lime);text-decoration:none;font-weight:700}
   .contact .row{margin:10px 0;font-size:1rem}
   footer{text-align:center;padding:24px;font-size:.8rem;color:#8a9a90}
+  .foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-bottom:14px}
+  .foot-nav a{color:var(--green-d);text-decoration:none;font-weight:700;font-size:.88rem}
+  .foot-nav a:hover{text-decoration:underline}
+
+  /* HPへ戻る導線 */
+  .back-bar{display:flex;align-items:center;justify-content:center;gap:6px;
+    background:var(--ink);color:#fff;text-decoration:none;font-size:.82rem;font-weight:700;
+    padding:10px 12px;letter-spacing:.02em}
+  .back-bar:hover{background:#0e2616}
 </style>
 </head>
 <body>
+
+<!-- ===== HPへ戻る導線（上部） ===== -->
+<a class="back-bar" href="/">‹ 小田急藤沢テニスガーデン 公式サイトへ戻る</a>
 
 <!-- ===== HERO ===== -->
 <header class="hero">
@@ -303,12 +315,17 @@
     <h2>お問い合わせ</h2>
     <div class="row">🎾 小田急藤沢テニスガーデン</div>
     <div class="row">TEL：<a href="tel:0467-76-1500">0467-76-1500</a></div>
-    <div class="row">Mail：<a href="mailto:メールアドレス未確定">（メールアドレス未確定）</a></div>
+    <div class="row">Mail：<a href="mailto:odakyu_taikai@yahoo.co.jp">odakyu_taikai@yahoo.co.jp</a></div>
     <div class="row">Instagram：<a href="https://www.instagram.com/oftg.tennis/" target="_blank" rel="noopener">@oftg.tennis</a></div>
   </div>
 </section>
 
 <footer>
+  <nav class="foot-nav">
+    <a href="/">公式サイトトップ</a>
+    <a href="/school.html">スクール案内</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </nav>
   © 小田急藤沢テニスガーデン / 有限会社ステップスポーツ
 </footer>
 
