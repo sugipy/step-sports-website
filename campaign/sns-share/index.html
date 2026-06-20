@@ -33,32 +33,10 @@
   h2 .accent{color:var(--green)}
   .lead{text-align:center;color:#5a6b60;margin-bottom:26px;font-size:.95rem}
 
-  /* ---------- HERO ---------- */
-  .hero{
-    background:
-      radial-gradient(circle at 85% 12%, rgba(198,244,50,.55), transparent 42%),
-      linear-gradient(160deg,var(--green) 0%,var(--green-d) 100%);
-    color:#fff;text-align:center;padding:54px 18px 64px;position:relative;overflow:hidden;
-  }
-  .hero .ball{position:absolute;width:120px;height:120px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%,#eaff8a,var(--lime));opacity:.18}
-  .hero .ball.b1{top:-30px;left:-30px}
-  .hero .ball.b2{bottom:-40px;right:-20px;width:160px;height:160px}
-  .badge-free{
-    display:inline-block;background:var(--pink);color:#fff;font-weight:800;
-    padding:6px 18px;border-radius:999px;font-size:.9rem;letter-spacing:.04em;
-    box-shadow:0 4px 0 rgba(0,0,0,.12);margin-bottom:18px;position:relative;z-index:1}
-  .hero h1{font-size:2rem;line-height:1.35;font-weight:900;position:relative;z-index:1;
-    text-shadow:0 2px 6px rgba(0,0,0,.18)}
-  .hero h1 .big{color:var(--lime);font-size:2.5rem;display:inline-block}
-  .hero p.sub{margin-top:16px;font-size:1.02rem;position:relative;z-index:1;opacity:.96}
-  .price-strip{
-    margin:24px auto 0;display:inline-flex;align-items:center;gap:12px;
-    background:rgba(255,255,255,.16);backdrop-filter:blur(2px);
-    border:2px dashed rgba(255,255,255,.6);border-radius:16px;padding:12px 20px;
-    position:relative;z-index:1}
-  .price-strip .was{text-decoration:line-through;opacity:.8;font-size:.95rem}
-  .price-strip .now{font-size:1.7rem;font-weight:900;color:var(--lime)}
+  /* ---------- HERO（画像） ---------- */
+  .hero-img{background:#48a7e7;text-align:center;font-size:0}
+  .hero-img img{display:block;width:100%;max-width:620px;height:auto;margin:0 auto}
+  .hero-cta{background:var(--cream);text-align:center;padding:8px 18px 0}
   .cta{
     display:inline-block;margin-top:30px;background:var(--lime);color:var(--ink);
     font-weight:900;font-size:1.15rem;padding:16px 40px;border-radius:999px;
@@ -171,19 +149,13 @@
 <!-- ===== HPへ戻る導線（上部） ===== -->
 <a class="back-bar" href="/">‹ 小田急藤沢テニスガーデン 公式サイトへ戻る</a>
 
-<!-- ===== HERO ===== -->
-<header class="hero">
-  <span class="ball b1"></span><span class="ball b2"></span>
-  <span class="badge-free">参加費 0円キャンペーン</span>
-  <h1>SNSシェアで<span class="big">無料！</span><br>お友達グループレッスン</h1>
-  <p class="sub">SNSでシェアするだけ！<br>部活の仲間を誘って、みんなでテニスしよう🎾</p>
-  <div class="price-strip">
-    <span class="was">通常 約3,000円</span>
-    <span class="now">→ 無料</span>
-  </div>
-  <br>
-  <a href="#apply" class="cta">いますぐ申し込む</a>
+<!-- ===== HERO（画像） ===== -->
+<header class="hero-img">
+  <a href="#apply"><img src="assets/hero.jpg" alt="SNSシェアで無料！お友達グループレッスン。通常約3,000円のレッスンが無料で受けられる！部活の仲間を誘って、みんなでテニスしよう！"></a>
 </header>
+<div class="hero-cta">
+  <a href="#apply" class="cta">いますぐ申し込む</a>
+</div>
 
 <!-- ===== 無料の条件 ===== -->
 <section>
