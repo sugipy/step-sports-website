@@ -355,6 +355,8 @@ src="https://www.facebook.com/tr?id=1011223808389316&ev=PageView&noscript=1"
 
     fetch(FORM_ACTION, { method:'POST', mode:'no-cors', body:data })
       .then(() => {
+        // Metaピクセル：申込み完了をコンバージョン(Lead)として計測
+        if (typeof fbq === 'function') { fbq('track', 'Lead', {content_name: 'SNSシェア無料グループレッスン申込'}); }
         form.style.display = 'none';
         doneEl.style.display = 'block';
         doneEl.scrollIntoView({behavior:'smooth', block:'center'});
