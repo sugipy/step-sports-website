@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNSシェアで無料！お友達グループレッスン｜小田急藤沢テニスガーデン</title>
+<meta name="description" content="SNSでシェアするだけ！部活の仲間と無料テニスレッスン。通常約3,000円のレッスンが無料。中学生・高校生のグループ（3〜8名）対象。">
+<!-- OGP -->
+<meta property="og:title" content="SNSシェアで無料！お友達グループレッスン">
+<meta property="og:description" content="SNSでシェアするだけ！部活の仲間と無料テニスレッスン。中高生3〜8名のグループ対象。">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --green:#1faa59;       /* コート/テニスのグリーン */
+    --green-d:#157a40;
+    --lime:#c6f432;        /* テニスボールのライム */
+    --ink:#15331f;
+    --pink:#ff5c8a;        /* ジュニア向けポップ差し色 */
+    --cream:#fffdf5;
+    --shadow:0 8px 24px rgba(21,51,31,.12);
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;
+    color:var(--ink); background:var(--cream); line-height:1.7;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  section{padding:44px 0}
+  h2{font-size:1.5rem;text-align:center;margin-bottom:6px;line-height:1.3}
+  h2 .accent{color:var(--green)}
+  .lead{text-align:center;color:#5a6b60;margin-bottom:26px;font-size:.95rem}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 12%, rgba(198,244,50,.55), transparent 42%),
+      linear-gradient(160deg,var(--green) 0%,var(--green-d) 100%);
+    color:#fff;text-align:center;padding:54px 18px 64px;position:relative;overflow:hidden;
+  }
+  .hero .ball{position:absolute;width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#eaff8a,var(--lime));opacity:.18}
+  .hero .ball.b1{top:-30px;left:-30px}
+  .hero .ball.b2{bottom:-40px;right:-20px;width:160px;height:160px}
+  .badge-free{
+    display:inline-block;background:var(--pink);color:#fff;font-weight:800;
+    padding:6px 18px;border-radius:999px;font-size:.9rem;letter-spacing:.04em;
+    box-shadow:0 4px 0 rgba(0,0,0,.12);margin-bottom:18px;position:relative;z-index:1}
+  .hero h1{font-size:2rem;line-height:1.35;font-weight:900;position:relative;z-index:1;
+    text-shadow:0 2px 6px rgba(0,0,0,.18)}
+  .hero h1 .big{color:var(--lime);font-size:2.5rem;display:inline-block}
+  .hero p.sub{margin-top:16px;font-size:1.02rem;position:relative;z-index:1;opacity:.96}
+  .price-strip{
+    margin:24px auto 0;display:inline-flex;align-items:center;gap:12px;
+    background:rgba(255,255,255,.16);backdrop-filter:blur(2px);
+    border:2px dashed rgba(255,255,255,.6);border-radius:16px;padding:12px 20px;
+    position:relative;z-index:1}
+  .price-strip .was{text-decoration:line-through;opacity:.8;font-size:.95rem}
+  .price-strip .now{font-size:1.7rem;font-weight:900;color:var(--lime)}
+  .cta{
+    display:inline-block;margin-top:30px;background:var(--lime);color:var(--ink);
+    font-weight:900;font-size:1.15rem;padding:16px 40px;border-radius:999px;
+    text-decoration:none;box-shadow:0 6px 0 #98c218,0 10px 20px rgba(0,0,0,.2);
+    position:relative;z-index:1;transition:transform .08s}
+  .cta:active{transform:translateY(3px);box-shadow:0 3px 0 #98c218}
+
+  /* ---------- STEPS ---------- */
+  .steps{display:grid;gap:16px}
+  .step{
+    background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:22px 22px 22px 70px;position:relative}
+  .step .num{
+    position:absolute;left:18px;top:20px;width:38px;height:38px;border-radius:50%;
+    background:var(--green);color:#fff;font-weight:900;display:grid;place-items:center;font-size:1.1rem}
+  .step h3{font-size:1.08rem;margin-bottom:4px}
+  .step p{font-size:.93rem;color:#4a5a50}
+  .rule{
+    margin-top:22px;background:#fff7fb;border:2px solid var(--pink);
+    border-radius:var(--radius);padding:18px 20px}
+  .rule h4{color:var(--pink);font-size:1rem;margin-bottom:8px;text-align:center}
+  .rule ul{list-style:none;display:grid;gap:8px}
+  .rule li{background:#fff;border-radius:12px;padding:10px 12px;font-size:.92rem;
+    display:flex;gap:8px;align-items:flex-start}
+  .rule li::before{content:"✔";color:var(--pink);font-weight:900}
+  .rule .ig{display:block;text-align:center;margin-top:10px;font-weight:800;color:var(--green-d)}
+
+  /* ---------- 日程 ---------- */
+  .sched{display:grid;gap:10px}
+  .slot{
+    display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;
+    box-shadow:var(--shadow);padding:14px 16px;border-left:6px solid var(--green)}
+  .slot .no{font-weight:900;color:var(--green);font-size:1.2rem;min-width:26px}
+  .slot .dt{flex:1}
+  .slot .dt b{font-size:1.02rem}
+  .slot .dt span{display:block;font-size:.85rem;color:#6a7a70}
+  .slot.full{border-left-color:#bbb;opacity:.6}
+  .slot.full .tag{background:#888}
+  .slot .tag{margin-left:auto;background:var(--lime);color:var(--ink);font-weight:800;
+    font-size:.78rem;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .note{font-size:.83rem;color:#6a7a70;margin-top:12px;text-align:center}
+
+  /* ---------- 参加条件 ---------- */
+  .cond{display:grid;gap:12px}
+  .cond .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:18px 20px;display:flex;gap:14px;align-items:center}
+  .cond .ico{font-size:1.8rem;min-width:34px;text-align:center}
+  .cond .card b{display:block;font-size:1rem}
+  .cond .card span{font-size:.9rem;color:#4a5a50}
+  .alert{background:var(--pink);color:#fff;text-align:center;font-weight:800;
+    border-radius:14px;padding:12px;margin-top:6px}
+
+  /* ---------- フォーム ---------- */
+  .form-sec{background:linear-gradient(160deg,#eafff2,#f3fff8);border-radius:28px;margin:0 18px;
+    box-shadow:var(--shadow)}
+  .form-card{padding:30px 22px}
+  form .field{margin-bottom:18px}
+  form label{display:block;font-weight:800;margin-bottom:6px;font-size:.95rem}
+  form label .req{color:var(--pink);font-size:.78rem;margin-left:6px}
+  form input[type=text],form input[type=tel],form textarea{
+    width:100%;border:2px solid #d6e6dc;border-radius:12px;padding:12px 14px;
+    font-size:16px;font-family:inherit;background:#fff;transition:border-color .15s}
+  form input:focus,form textarea:focus{outline:none;border-color:var(--green)}
+  form textarea{min-height:96px;resize:vertical}
+  .hint{font-size:.8rem;color:#6a7a70;margin-top:4px}
+  .opts{display:grid;gap:8px}
+  .opt{display:flex;align-items:center;gap:10px;background:#fff;border:2px solid #d6e6dc;
+    border-radius:12px;padding:11px 14px;cursor:pointer;font-size:.92rem;transition:.12s}
+  .opt:has(input:checked){border-color:var(--green);background:#eafff2}
+  .opt.disabled{opacity:.5;background:#f1f1f1;cursor:not-allowed}
+  .opt input{width:18px;height:18px;accent-color:var(--green)}
+  .opt .full-tag{margin-left:auto;font-size:.75rem;color:#999;font-weight:700}
+  .submit-btn{
+    width:100%;background:var(--green);color:#fff;font-weight:900;font-size:1.15rem;
+    border:none;border-radius:999px;padding:16px;cursor:pointer;
+    box-shadow:0 6px 0 var(--green-d);transition:transform .08s;margin-top:8px}
+  .submit-btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--green-d)}
+  .submit-btn:disabled{opacity:.6;cursor:wait}
+  .form-err{color:var(--pink);font-weight:700;font-size:.88rem;margin-top:10px;text-align:center;display:none}
+  .after{background:#fff;border-radius:14px;padding:14px 16px;margin-top:16px;font-size:.86rem;color:#4a5a50}
+  .after b{color:var(--green-d)}
+
+  /* 送信完了 */
+  .done{display:none;text-align:center;padding:20px 10px}
+  .done .check{width:72px;height:72px;border-radius:50%;background:var(--green);color:#fff;
+    font-size:2.4rem;display:grid;place-items:center;margin:0 auto 16px;animation:pop .4s}
+  @keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+  .done h3{font-size:1.3rem;margin-bottom:10px}
+  .done p{font-size:.95rem;color:#4a5a50}
+
+  /* ---------- お問い合わせ / footer ---------- */
+  .contact{background:var(--ink);color:#fff;text-align:center;border-radius:28px;margin:0 18px;padding:34px 22px}
+  .contact h2{color:#fff}
+  .contact a{color:var(--lime);text-decoration:none;font-weight:700}
+  .contact .row{margin:10px 0;font-size:1rem}
+  footer{text-align:center;padding:24px;font-size:.8rem;color:#8a9a90}
+  .foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-bottom:14px}
+  .foot-nav a{color:var(--green-d);text-decoration:none;font-weight:700;font-size:.88rem}
+  .foot-nav a:hover{text-decoration:underline}
+
+  /* HPへ戻る導線 */
+  .back-bar{display:flex;align-items:center;justify-content:center;gap:6px;
+    background:var(--ink);color:#fff;text-decoration:none;font-size:.82rem;font-weight:700;
+    padding:10px 12px;letter-spacing:.02em}
+  .back-bar:hover{background:#0e2616}
+</style>
+</head>
+<body>
+
+<!-- ===== HPへ戻る導線（上部） ===== -->
+<a class="back-bar" href="/">‹ 小田急藤沢テニスガーデン 公式サイトへ戻る</a>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <span class="ball b1"></span><span class="ball b2"></span>
+  <span class="badge-free">参加費 0円キャンペーン</span>
+  <h1>SNSシェアで<span class="big">無料！</span><br>お友達グループレッスン</h1>
+  <p class="sub">SNSでシェアするだけ！<br>部活の仲間を誘って、みんなでテニスしよう🎾</p>
+  <div class="price-strip">
+    <span class="was">通常 約3,000円</span>
+    <span class="now">→ 無料</span>
+  </div>
+  <br>
+  <a href="#apply" class="cta">いますぐ申し込む</a>
+</header>
+
+<!-- ===== 無料の条件 ===== -->
+<section>
+  <div class="wrap">
+    <h2>無料の<span class="accent">条件</span>は2ステップだけ！</h2>
+    <p class="lead">参加者全員に、Instagramストーリーを<b>2回</b>投稿していただきます</p>
+    <div class="steps">
+      <div class="step"><span class="num">1</span>
+        <h3>申込み時（事前）</h3>
+        <p>レッスンに申し込んだことをストーリーでシェア！</p>
+      </div>
+      <div class="step"><span class="num">2</span>
+        <h3>レッスン当日</h3>
+        <p>レッスンの様子をストーリーでシェア！</p>
+      </div>
+    </div>
+    <div class="rule">
+      <h4>📸 投稿ルール（2つとも必須）</h4>
+      <ul>
+        <li><span><b>@oftg.tennis</b> をメンション</span></li>
+        <li><span>位置情報「<b>小田急藤沢テニスガーデン</b>」を追加</span></li>
+      </ul>
+      <a class="ig" href="https://www.instagram.com/oftg.tennis/" target="_blank" rel="noopener">▶ Instagram @oftg.tennis をフォロー</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 日程 ===== -->
+<section style="background:#f1faf4">
+  <div class="wrap">
+    <h2><span class="accent">日程</span>を選ぼう</h2>
+    <p class="lead">1枠1グループの貸切レッスンです</p>
+    <div class="sched">
+      <div class="slot full"><span class="no">①</span><div class="dt"><b>6/20（土）</b><span>16:30〜18:00</span></div><span class="tag">満員御礼</span></div>
+      <div class="slot full"><span class="no">②</span><div class="dt"><b>6/20（土）</b><span>18:00〜19:30</span></div><span class="tag">満員御礼</span></div>
+      <div class="slot"><span class="no">③</span><div class="dt"><b>6/21（日）</b><span>15:30〜17:00</span></div><span class="tag">受付中</span></div>
+      <div class="slot"><span class="no">④</span><div class="dt"><b>6/21（日）</b><span>17:00〜18:30</span></div><span class="tag">受付中</span></div>
+      <div class="slot"><span class="no">⑤</span><div class="dt"><b>6/28（日）</b><span>15:30〜17:00</span></div><span class="tag">受付中</span></div>
+      <div class="slot"><span class="no">⑥</span><div class="dt"><b>6/28（日）</b><span>17:00〜18:30</span></div><span class="tag">受付中</span></div>
+      <div class="slot"><span class="no">⑦</span><div class="dt"><b>7/4（土）</b><span>16:30〜18:00</span></div><span class="tag">受付中</span></div>
+      <div class="slot"><span class="no">⑧</span><div class="dt"><b>7/4（土）</b><span>18:00〜19:30</span></div><span class="tag">受付中</span></div>
+    </div>
+    <p class="note">※上記以外の曜日をご希望の場合は、メールまたはお電話でご相談ください。</p>
+  </div>
+</section>
+
+<!-- ===== 参加条件 ===== -->
+<section>
+  <div class="wrap">
+    <h2>参加<span class="accent">条件</span></h2>
+    <div class="cond">
+      <div class="card"><span class="ico">👥</span><div><b>人数</b><span>3名〜8名のグループでお申込みください</span></div></div>
+      <div class="card"><span class="ico">🎒</span><div><b>対象</b><span>中学生・高校生（部活の仲間同士の参加を推奨）</span></div></div>
+      <div class="card"><span class="ico">⏰</span><div><b>締切</b><span>各回の前日まで（定員になり次第終了）</span></div></div>
+    </div>
+    <p class="alert">⚡ 枠に限りがあります。お早めにお申込みください！</p>
+  </div>
+</section>
+
+<!-- ===== 申込フォーム（iframeなし・完全統合） ===== -->
+<section id="apply" class="form-sec">
+  <div class="form-card">
+    <h2>申込<span class="accent">フォーム</span></h2>
+    <p class="lead">下記を入力して送信してください</p>
+
+    <form id="applyForm" novalidate>
+      <div class="field">
+        <label>代表者氏名<span class="req">必須</span></label>
+        <input type="text" name="entry.1750748327" required placeholder="例）藤沢 太郎">
+      </div>
+
+      <div class="field">
+        <label>代表者の電話番号<span class="req">必須</span></label>
+        <input type="tel" name="entry.419193698" required placeholder="例）090-1234-5678">
+      </div>
+
+      <div class="field">
+        <label>参加者の氏名一覧<span class="req">必須</span></label>
+        <textarea name="entry.1886865254" required placeholder="参加する全員のお名前を入力してください（3〜8名）"></textarea>
+        <p class="hint">代表者を含む参加者全員のお名前をご記入ください。</p>
+      </div>
+
+      <div class="field">
+        <label>このお友達の関係</label>
+        <div class="opts" data-name="entry.1554708717">
+          <label class="opt"><input type="radio" name="entry.1554708717" value="部活仲間">部活仲間</label>
+          <label class="opt"><input type="radio" name="entry.1554708717" value="学校の仲良しグループ">学校の仲良しグループ</label>
+          <label class="opt"><input type="radio" name="entry.1554708717" value="近所の友達">近所の友達</label>
+          <label class="opt"><input type="radio" name="entry.1554708717" value="その他">その他</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>希望する開催日（複数選択可）<span class="req">必須</span></label>
+        <div class="opts" id="dateOpts">
+          <label class="opt disabled"><input type="checkbox" name="entry.859261833" value="【満員】① 6/20(土) 16:30〜18:00" disabled>① 6/20(土) 16:30〜18:00<span class="full-tag">満員</span></label>
+          <label class="opt disabled"><input type="checkbox" name="entry.859261833" value="【満員】② 6/20(土) 18:00〜19:30" disabled>② 6/20(土) 18:00〜19:30<span class="full-tag">満員</span></label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="③ 6/21(日) 15:30〜17:00">③ 6/21(日) 15:30〜17:00</label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="④ 6/21(日) 17:00〜18:30">④ 6/21(日) 17:00〜18:30</label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="⑤ 6/28(日) 15:30〜17:00">⑤ 6/28(日) 15:30〜17:00</label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="⑥ 6/28(日) 17:00〜18:30">⑥ 6/28(日) 17:00〜18:30</label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="⑦ 7/4(土) 16:30〜18:00">⑦ 7/4(土) 16:30〜18:00</label>
+          <label class="opt"><input type="checkbox" name="entry.859261833" value="⑧ 7/4(土) 18:00〜19:30">⑧ 7/4(土) 18:00〜19:30</label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">この内容で申し込む 🎾</button>
+      <p class="form-err" id="formErr">未入力の必須項目があります。ご確認ください。</p>
+
+      <div class="after">
+        <b>📩 ご注意：</b>申請だけでは予約は確定しません。<br>
+        こちらからの<b>返信メールで予約確定</b>となりますので、必ず返信をお待ちください。
+      </div>
+    </form>
+
+    <!-- 送信完了 -->
+    <div class="done" id="doneMsg">
+      <div class="check">✓</div>
+      <h3>お申し込みありがとうございます！</h3>
+      <p>担当者より<b>予約確定の返信メール</b>をお送りします。<br>今しばらくお待ちください🎾<br><br>
+      <small>※あわせて、Instagramストーリーでの「申込みシェア」もお忘れなく！</small></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== お問い合わせ ===== -->
+<section>
+  <div class="contact">
+    <h2>お問い合わせ</h2>
+    <div class="row">🎾 小田急藤沢テニスガーデン</div>
+    <div class="row">TEL：<a href="tel:0467-76-1500">0467-76-1500</a></div>
+    <div class="row">Mail：<a href="mailto:odakyu_taikai@yahoo.co.jp">odakyu_taikai@yahoo.co.jp</a></div>
+    <div class="row">Instagram：<a href="https://www.instagram.com/oftg.tennis/" target="_blank" rel="noopener">@oftg.tennis</a></div>
+  </div>
+</section>
+
+<footer>
+  <nav class="foot-nav">
+    <a href="/">公式サイトトップ</a>
+    <a href="/school.html">スクール案内</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </nav>
+  © 小田急藤沢テニスガーデン / 有限会社ステップスポーツ
+</footer>
+
+<script>
+(function(){
+  const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeXao9KNGvhc_BVnLXoHIacWK6aRqFQJQ_hWeprZJLWQ8IK1A/formResponse";
+  const form   = document.getElementById('applyForm');
+  const errEl  = document.getElementById('formErr');
+  const doneEl = document.getElementById('doneMsg');
+  const btn    = form.querySelector('.submit-btn');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.style.display = 'none';
+
+    // --- バリデーション ---
+    const name  = form.querySelector('[name="entry.1750748327"]').value.trim();
+    const tel   = form.querySelector('[name="entry.419193698"]').value.trim();
+    const list  = form.querySelector('[name="entry.1886865254"]').value.trim();
+    const dates = [...form.querySelectorAll('[name="entry.859261833"]:checked')];
+    if(!name || !tel || !list || dates.length === 0){
+      errEl.style.display = 'block';
+      errEl.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    // --- Googleフォームへ直接POST（iframe不使用 / no-cors） ---
+    const data = new FormData();
+    data.append('entry.1750748327', name);
+    data.append('entry.419193698',  tel);
+    data.append('entry.1886865254', list);
+    const rel = form.querySelector('[name="entry.1554708717"]:checked');
+    if(rel) data.append('entry.1554708717', rel.value);
+    dates.forEach(d => data.append('entry.859261833', d.value)); // 複数選択は同名で追加
+
+    btn.disabled = true; btn.textContent = '送信中…';
+
+    fetch(FORM_ACTION, { method:'POST', mode:'no-cors', body:data })
+      .then(() => {
+        form.style.display = 'none';
+        doneEl.style.display = 'block';
+        doneEl.scrollIntoView({behavior:'smooth', block:'center'});
+      })
+      .catch(() => {
+        // no-cors のため通常 catch には来ないが念のため
+        btn.disabled = false; btn.textContent = 'この内容で申し込む 🎾';
+        errEl.textContent = '送信に失敗しました。通信環境をご確認のうえ再度お試しください。';
+        errEl.style.display = 'block';
+      });
+  });
+})();
+</script>
+</body>
+</html>
